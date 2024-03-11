@@ -20,5 +20,5 @@ test('loadUser should call httpGet with the correct URL and parse the response',
 
 test('saveUser should throw an error "Unimplemented"', () => {
   // Тест на случай, если вдруг saveUser будет вызвана в будущем
-  expect(() => saveUser()).toThrowError('Unimplemented');
+  expect(() => saveUser()).toThrow('Unimplemented');
 });

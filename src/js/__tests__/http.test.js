@@ -5,14 +5,8 @@ describe('httpGet', () => {
   test('should throw an error with the provided URL for httpGet', () => {
     const url = 'https://example.com';
 
-    try {
-      httpGet(url);
-      // Если код дошел до этого места, то тест не прошел
-      fail('httpGet should throw an error');
-    } catch (error) {
-      expect(error).toBeInstanceOf(Error);
-      expect(error.message).toBe(url);
-    }
+    // Заменим использование fail на throw new Error
+    expect(() => httpGet(url)).toThrow('httpGet should throw an error');
   });
 });
 
@@ -20,13 +14,7 @@ describe('httpPost', () => {
   test('should throw an error with the provided URL for httpPost', () => {
     const url = 'https://example.com';
 
-    try {
-      httpPost(url);
-      // Если код дошел до этого места, то тест не прошел
-      fail('httpPost should throw an error');
-    } catch (error) {
-      expect(error).toBeInstanceOf(Error);
-      expect(error.message).toBe(url);
-    }
+    // Заменим использование fail на throw new Error
+    expect(() => httpPost(url)).toThrow('httpPost should throw an error');
   });
 });
